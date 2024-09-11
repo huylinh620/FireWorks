@@ -1,5 +1,5 @@
 'use strict';
-console.clear();
+
 // This is a prime example of what starts out as a simple project
 // and snowballs way beyond its intended size. It's a little clunky
 // reading/working on this single file, but here it is anyways :)
@@ -293,49 +293,47 @@ const finaleSelector = () => store.state.config.finale;
 const skyLightingSelector = () => +store.state.config.skyLighting;
 const scaleFactorSelector = () => store.state.config.scaleFactor;
 
-
-
 // Help Content
 const helpContent = {
 	shellType: {
-		header: '烟花类型',
-		body: '选择将要发射的烟花类型。 选择“随机”是一个不错的选择！'
+		header: 'Shell Type',
+		body: 'The type of firework that will be launched. Select "Random" for a nice assortment!'
 	},
 	shellSize: {
-		header: '烟花大小',
-		body: '烟花的大小：以真实的烟花炮弹尺寸为模型，较大的炮弹具有更大的爆发力，带有更多的星星，有时效果更复杂。 但是，较大的尺寸还需要更多的处理能力，并且可能会导致延迟。'
+		header: 'Shell Size',
+		body: 'The size of the fireworks. Modeled after real firework shell sizes, larger shells have bigger bursts with more stars, and sometimes more complex effects. However, larger shells also require more processing power and may cause lag.'
 	},
 	quality: {
-		header: '画质',
-		body: '整体图形质量。 如果动画运行不流畅，请尝试降低质量。 高质量会大大增加产生的火花数量，并可能导致滞后。'
+		header: 'Quality',
+		body: 'Overall graphics quality. If the animation is not running smoothly, try lowering the quality. High quality greatly increases the amount of sparks rendered and may cause lag.'
 	},
 	skyLighting: {
-		header: '天空照明',
-		body: '烟花爆炸时照亮背景。 如果背景在屏幕上看起来太亮，请尝试将其设置为“暗淡”或“无”。'
+		header: 'Sky Lighting',
+		body: 'Illuminates the background as fireworks explode. If the background looks too bright on your screen, try setting it to "Dim" or "None".'
 	},
 	scaleFactor: {
-		header: '规模',
-		body: '允许缩放所有烟花的大小，实质上使您靠近或远离。 对于较大的烟花类型，可以稍微减小比例，尤其是在手机或平板电脑上。'
+		header: 'Scale',
+		body: 'Allows scaling the size of all fireworks, essentially moving you closer or farther away. For larger shell sizes, it can be convenient to decrease the scale a bit, especially on phones or tablets.'
 	},
 	autoLaunch: {
-		header: '自动发射',
-		body: '启用此选项即可自动启动烟花序列，取消勾选你就可以手动控制烟花的发射'
+		header: 'Auto Fire',
+		body: 'Launches sequences of fireworks automatically. Sit back and enjoy the show, or disable to have full control.'
 	},
 	finaleMode: {
-		header: '结局模式',
-		body: '发射强烈的烟花。 可能会导致延迟。 需要同时启用“自动发射”。'
+		header: 'Finale Mode',
+		body: 'Launches intense bursts of fireworks. May cause lag. Requires "Auto Fire" to be enabled.'
 	},
 	hideControls: {
-		header: '隐藏控制器',
-		body: '隐藏屏幕顶部的半透明控件。 对于屏幕截图很有用，或者只是更无缝的体验。 隐藏后，您仍然可以点击右上角以重新打开此菜单。'
+		header: 'Hide Controls',
+		body: 'Hides the translucent controls along the top of the screen. Useful for screenshots, or just a more seamless experience. While hidden, you can still tap the top-right corner to re-open this menu.'
 	},
 	fullscreen: {
-		header: '全屏',
-		body: '切换全屏模式。'
+		header: 'Fullscreen',
+		body: 'Toggles fullscreen mode.'
 	},
 	longExposure: {
-		header: '打开快门',
-		body: '实验效果可以保留长时间的光线，类似于保持相机快门打开。'
+		header: 'Open Shutter',
+		body: 'Experimental effect that preserves long streaks of light, similar to leaving a camera shutter open.'
 	}
 };
 
