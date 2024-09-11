@@ -112,8 +112,8 @@
             </svg>
           </div>
 
-          <div class="menu__header">设置</div>
-
+          <div class="menu__header">Settings</div>
+          <div class="menu__subheader">For more info, click any label.</div>
           <form>
             <div class="form-option form-option--select">
               <label class="shell-type-label">Fireworks Type</label>
@@ -164,7 +164,7 @@
       <div class="help-modal__dialog">
         <div class="help-modal__header"></div>
         <div class="help-modal__body"></div>
-        <button type="button" class="help-modal__close-btn">关闭</button>
+        <button type="button" class="help-modal__close-btn">Close</button>
       </div>
     </div>
   </div>
@@ -198,14 +198,14 @@
       setTimeout(() => {
         start()
         fireworks();
-      }, 5000) // 这里的5000 是5s指烟花延时时间
+      }, 20000) 
       setTimeout(() => {
         function audioAutoPlay() {
           var audio = document.getElementById('audioDom');
           audio.play();
         }
         audioAutoPlay();
-      }, 5000) // 这里的5000 是5s指音乐延时时间
+      }, 1000)
       console.log(updateConfig({ autoLaunch: true }));
     })
 
@@ -222,14 +222,17 @@
     }
 
     function start() {
-      let str = "Weather forecast:<br>During the day on Vietnam Women Day,<br>I’ll miss you a little.<br>In the afternoon, this will turn into heavy thoughts of you, and my mood will drop by five degrees.<br>Due to the influence of this low mood, this kind of weather is expected to last until I see you."
+      let str = `Vì yêu em, anh chẳng ngại đường dài phía trước.<br>
+       Là ngày bên em,<br>
+       những con phố có hoa bay bao sắc màu Những quan vương chẳng còn buồn,<br>
+       và những khúc ca sẽ thêm màu yêu thương Ngày hôm nay,<br> đôi ta mãi sẽ là của nhau...`
       let str_ = ''
       let i = 0
       let content = document.getElementById('contents')
       let timer = setInterval(() => {
         if (str_.length < str.length) {
           str_ += str[i++]
-          content.innerHTML = '<p>' + str_ + '<span class="xx" style="opacity: 1; color: red;">❤</span></p>'                        //打印时加光标
+          content.innerHTML = '<p>' + str_ + '<span class="xx" style="opacity: 1; color: red;">❤</span></p>'
         } else {
           clearInterval(timer)
           content.innerHTML = '<p>' + str_ + '</p>'
